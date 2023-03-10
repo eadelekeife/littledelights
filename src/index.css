@@ -1,13 +1,126 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+    --yellow: #D4B134;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('./fonts/SpaceGrotesk-Regular.otf');
+}
+
+body, html {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk';
+    background: #FCFBFB;
+}
+
+.website-content {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.side-display {
+    background: url('./side.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    min-height: 100vh;
+    /* flex: 1; */
+}
+
+.main-content {
+    height: 100%;
+    width: 100%;
+}
+
+.form-flex-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.form-content {
+    width: 65%;
+    display: block;
+    margin-left: 5%;
+    margin-top: 6%;
+    /* margin: 0% auto; */
+}
+
+.form-content h2 {
+    margin-bottom: 0px;
+}
+
+.form-content p {
+    line-height: 1.8;
+    margin-top: 0px;
+}
+
+.form-content h3 {
+    margin: 0%;
+}
+
+.form-content h3 img {
+    height: 3rem;
+    width: auto;
+}
+
+label {
+    display: block;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    display: block;
+    height: 3rem;
+    padding-left: 10px;
+    border-radius: 3px;
+    border: 1px solid #D9D9D9;
+    background: #FCFBFB;
+}
+
+button {
+    background: var(--yellow);
+    border: 1px solid var(--yellow);
+    padding: 12px 25px;
+    border-radius: 2px;
+    font-family: 'Space Grotesk';
+}
+
+.form-group {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.form-content button {
+    margin-top: 5%;
+}
+
+.errorMessage {
+    color: rgb(207, 20, 20);
+}
+
+@media screen and (max-width: 720px) {
+    .website-content {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .side-display {
+        height: 20rem;
+        min-height: unset;
+    }
+
+    .form-content {
+        width: 100%;
+        display: block;
+        margin-left: 1.5%;
+        margin-right: 1.5%;
+        margin-top: 6%;
+    }
 }
