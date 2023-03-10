@@ -7,18 +7,27 @@
     src: url('./fonts/SpaceGrotesk-Regular.otf');
 }
 
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
 body, html {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
     font-family: 'Space Grotesk';
     background: #FCFBFB;
+    /* width: 100%;
+    overflow-x: hidden; */
 }
 
 .website-content {
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr 2fr;
+    width: 100%;
 }
 
 .side-display {
@@ -43,7 +52,7 @@ body, html {
 }
 
 .form-content {
-    width: 65%;
+    /* width: 65%; */
     display: block;
     margin-left: 5%;
     margin-top: 6%;
@@ -107,20 +116,48 @@ button {
 @media screen and (max-width: 720px) {
     .website-content {
         min-height: 100vh;
-        display: flex;
+        display: block;
         flex-direction: column;
+        padding-bottom: 20%;
+    }
+
+    .main-content {
+        display: block;
+        padding-left: 1.5%;
+        padding-right: 1.5%;
     }
 
     .side-display {
-        height: 20rem;
+        height: 10rem;
         min-height: unset;
     }
 
     .form-content {
-        width: 100%;
+        /* width: 100%; */
         display: block;
-        margin-left: 1.5%;
-        margin-right: 1.5%;
+        margin: unset;
         margin-top: 6%;
+    }
+
+    .form-content p {
+        font-size: .9rem;
+        line-height: 1.6;
+    }
+
+    .form-content form {
+        margin-top: 7%;
+    }
+
+    form label {
+        font-size: .9rem;
+    }
+    button {
+        padding: 15px 25px;
+        width: 100%;
+        font-size: .9rem;
+        margin-top: 5%;
+    }
+    .form-flex-2 {
+        grid-gap: 10px;
     }
 }
